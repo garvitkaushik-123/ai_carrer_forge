@@ -39,6 +39,18 @@ async def submit_answers(req: SubmitAnswersRequest):
     )
 
     all_dimensions = [technical_result, resume_result, communication_result, portfolio_result]
+    for dim in all_dimensions:
+        for field in ("strengths", "improvements", "topics_to_study"):
+            if field in dim:
+                dim[field] = [
+                    item if isinstance(item, str) else next(iter(item.values()))
+                    for item in dim[field]
+                ]
+        if "articles" in dim:
+            dim["articles"] = [
+                a if isinstance(a, dict) and "title" in a else {"title": str(a), "url": "", "source": ""}
+                for a in dim["articles"]
+            ]
     aggregated = aggregate_scores(all_dimensions)
 
     result = AssessmentResult(
