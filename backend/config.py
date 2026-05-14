@@ -1,0 +1,24 @@
+import os
+
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+MODEL_NAME = "claude-sonnet-4-6-20250514"
+MAX_RESUME_SIZE_MB = 5
+ALLOWED_EXTENSIONS = {".pdf", ".docx"}
+
+DIMENSION_WEIGHTS = {
+    "technical_skills": 0.35,
+    "resume_quality": 0.25,
+    "communication": 0.20,
+    "portfolio": 0.20,
+}
+
+SCORE_BANDS = [
+    {"min": 80, "max": 100, "label": "Interview Ready", "color": "green",
+     "message": "You're well-prepared. Fine-tune these areas."},
+    {"min": 60, "max": 79, "label": "Almost There", "color": "yellow",
+     "message": "Solid foundation, but these gaps could cost you."},
+    {"min": 40, "max": 59, "label": "Needs Work", "color": "orange",
+     "message": "Significant gaps to address before interviewing."},
+    {"min": 0, "max": 39, "label": "Not Ready", "color": "red",
+     "message": "Focus on building fundamentals first."},
+]
