@@ -1,4 +1,4 @@
-const BASE = "/api";
+const BASE = `${import.meta.env.VITE_API_URL || "https://ai-carrer-forge-1.onrender.com"}/api`;
 
 export async function uploadResume(file) {
   const formData = new FormData();
