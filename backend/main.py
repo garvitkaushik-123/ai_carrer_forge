@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from routers.upload import router as upload_router
+from routers.questions import router as questions_router
 
 app = FastAPI(title="Interview Readiness Scorer")
 
@@ -10,6 +12,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(upload_router)
+app.include_router(questions_router)
 
 
 @app.get("/api/health")
