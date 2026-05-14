@@ -15,7 +15,16 @@
       "Bash(.venv/bin/pip install *)",
       "Bash(git commit -m ' *)",
       "Bash(.venv/bin/python -c \"from routers.upload import router; print\\('OK'\\)\")",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(npx vite *)",
+      "Bash(.venv/bin/uvicorn main:app --reload --port 8000)",
+      "Bash(curl -s http://localhost:8000/api/health)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(pkill -f \"uvicorn main:app\")",
+      "Bash(pkill -f \"vite --port 5173\")",
+      "Bash(echo \"backend started pid $!\")",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
