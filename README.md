@@ -2,6 +2,8 @@
 
 **Live App:** [ai-carrer-forge.vercel.app](https://ai-carrer-forge.vercel.app/)
 
+**Demo Video:** [Watch on Google Drive](https://drive.google.com/drive/folders/1yR_WMG3lPv95zs5enIvODSQBAcf7LRqC?usp=sharing)
+
 ## What is Ready Score?
 
 Ready Score is an AI-powered interview readiness tool that helps job seekers understand how prepared they are for their next interview — and exactly what to do to improve.
