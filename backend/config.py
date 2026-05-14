@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-MODEL_NAME = "gemini-2.0-flash-lite"
+MODEL_NAME = "gemini-3.1-flash-lite-preview"
 MAX_RESUME_SIZE_MB = 5
 ALLOWED_EXTENSIONS = {".pdf", ".docx"}
 
