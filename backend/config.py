@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-MODEL_NAME = "claude-sonnet-4-6-20250514"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+MODEL_NAME = "gemini-2.0-flash"
 MAX_RESUME_SIZE_MB = 5
 ALLOWED_EXTENSIONS = {".pdf", ".docx"}
 

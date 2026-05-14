@@ -1,6 +1,6 @@
 import json
-import anthropic
-from config import ANTHROPIC_API_KEY, MODEL_NAME
+import google.generativeai as genai
+from config import GEMINI_API_KEY, MODEL_NAME
 
 
 def load_prompt(name: str) -> str:
@@ -8,7 +8,8 @@ def load_prompt(name: str) -> str:
         return f.read()
 
 
-client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+genai.configure(api_key=GEMINI_API_KEY)
+client = genai.GenerativeModel(MODEL_NAME)
 
 
 async def generate_questions(resume_data: dict) -> list[dict]:
@@ -30,13 +31,8 @@ async def generate_questions(resume_data: dict) -> list[dict]:
         num_questions=num_questions,
     )
 
-    message = client.messages.create(
-        model=MODEL_NAME,
-        max_tokens=1024,
-        messages=[{"role": "user", "content": prompt}],
-    )
-
-    response_text = message.content[0].text
+    response = client.generate_content(prompt)
+    response_text = response.text
     json_start = response_text.find("[")
     json_end = response_text.rfind("]") + 1
     questions = json.loads(response_text[json_start:json_end])
