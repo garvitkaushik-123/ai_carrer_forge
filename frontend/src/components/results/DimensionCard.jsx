@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, CheckCircle, ArrowUpCircle, BookOpen, Cpu, FileText, MessageSquare, Layers } from "lucide-react";
+import { ChevronDown, CheckCircle, ArrowUpCircle, BookOpen, GraduationCap, ExternalLink, Cpu, FileText, MessageSquare, Layers } from "lucide-react";
 import { getScoreBand } from "../../utils/scoreBands";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
@@ -96,7 +96,47 @@ export default function DimensionCard({ dimension, delay = 0 }) {
             </div>
           )}
 
-          {dimension.resources?.length > 0 && (
+          {dimension.topics_to_study?.length > 0 && (
+            <div className="mb-5">
+              <div className="flex items-center gap-2 mb-3">
+                <GraduationCap className="w-4 h-4 text-indigo-500" />
+                <span className="text-xs font-semibold uppercase tracking-wider text-indigo-600">Topics to Study</span>
+              </div>
+              {dimension.topics_to_study.map((t, i) => (
+                <div key={i} className="flex items-start gap-2 mb-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-2 flex-shrink-0" />
+                  <p className="text-sm text-gray-700 leading-relaxed">{t}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {dimension.articles?.length > 0 && (
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <BookOpen className="w-4 h-4 text-brand-500" />
+                <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">Recommended Articles</span>
+              </div>
+              {dimension.articles.map((a, i) => (
+                <a
+                  key={i}
+                  href={a.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex items-start gap-2 mb-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                >
+                  <ExternalLink className="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-brand-600 group-hover:underline font-medium">{a.title}</p>
+                    <p className="text-xs text-gray-400">{a.source}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
+
+          {dimension.resources?.length > 0 && !dimension.articles?.length && (
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <BookOpen className="w-4 h-4 text-brand-500" />

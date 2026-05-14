@@ -18,8 +18,16 @@ Return valid JSON:
   "score": <0-100>,
   "strengths": ["strength 1", "strength 2"],
   "improvements": ["improvement 1 with specific action step", "improvement 2 with specific action step"],
-  "resources": ["resource 1: name - URL or description", "resource 2: name - URL or description"]
+  "topics_to_study": ["specific resume writing topic 1", "specific resume writing topic 2"],
+  "articles": [
+    {{"title": "Article or course title", "url": "https://real-url-to-resource", "source": "Site name"}},
+    {{"title": "Article or course title", "url": "https://real-url-to-resource", "source": "Site name"}}
+  ]
 }}
 
+IMPORTANT for topics_to_study: Be extremely specific. Not "improve resume" but "learn to quantify achievements using the XYZ formula (Accomplished X as measured by Y by doing Z)" or "study ATS keyword optimization for your target role". List 2-3 topics.
+
+IMPORTANT for articles: Only suggest URLs from well-known sites: Indeed Career Guide (indeed.com/career-advice), The Muse (themuse.com), Resume Worded (resumeworded.com), Harvard Career Services, Zety (zety.com). Provide 2-3 articles with real, commonly known page URLs.
+
 Be specific. Reference actual content from the resume. For improvements, give the exact fix (e.g., "Rewrite bullet 2 under Experience to include metrics: 'Reduced API latency by X% by implementing Y'").
-Strengths: 2-3 items. Improvements: 2-3 items. Resources: 1 per improvement.
+Strengths: 2-3 items. Improvements: 2-3 items.

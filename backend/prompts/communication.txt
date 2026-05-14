@@ -15,8 +15,16 @@ Return valid JSON:
   "score": <0-100>,
   "strengths": ["strength 1", "strength 2"],
   "improvements": ["improvement 1 with specific action step", "improvement 2 with specific action step"],
-  "resources": ["resource 1: name - URL or description", "resource 2: name - URL or description"]
+  "topics_to_study": ["specific communication topic 1", "specific communication topic 2"],
+  "articles": [
+    {{"title": "Article or course title", "url": "https://real-url-to-resource", "source": "Site name"}},
+    {{"title": "Article or course title", "url": "https://real-url-to-resource", "source": "Site name"}}
+  ]
 }}
 
+IMPORTANT for topics_to_study: Be extremely specific. Not "improve communication" but "practice the STAR method for behavioral interview answers" or "study concise technical writing — eliminate filler words and passive voice". List 2-3 topics.
+
+IMPORTANT for articles: Only suggest URLs from well-known sites: Harvard Business Review (hbr.org), Grammarly Blog (grammarly.com/blog), Indeed Career Guide (indeed.com/career-advice), The Muse (themuse.com), Coursera (coursera.org). Provide 2-3 articles with real, commonly known page URLs.
+
 Be specific. Quote phrases from their answers to illustrate points. For improvements, show a rewritten example.
-Strengths: 2-3 items. Improvements: 2-3 items. Resources: 1 per improvement.
+Strengths: 2-3 items. Improvements: 2-3 items.

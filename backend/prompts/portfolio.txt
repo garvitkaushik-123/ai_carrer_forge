@@ -16,8 +16,16 @@ Return valid JSON:
   "score": <0-100>,
   "strengths": ["strength 1", "strength 2"],
   "improvements": ["improvement 1 with specific action step", "improvement 2 with specific action step"],
-  "resources": ["resource 1: name - URL or description", "resource 2: name - URL or description"]
+  "topics_to_study": ["specific portfolio topic 1", "specific portfolio topic 2"],
+  "articles": [
+    {{"title": "Article or course title", "url": "https://real-url-to-resource", "source": "Site name"}},
+    {{"title": "Article or course title", "url": "https://real-url-to-resource", "source": "Site name"}}
+  ]
 }}
 
+IMPORTANT for topics_to_study: Be extremely specific. Not "build projects" but "build a full-stack CRUD app with authentication and deploy it to Vercel/Railway" or "write detailed README files with screenshots, tech stack, and setup instructions for each project". List 2-3 topics.
+
+IMPORTANT for articles: Only suggest URLs from well-known sites: GitHub Guides (docs.github.com), freeCodeCamp (freecodecamp.org), Dev.to (dev.to), The Odin Project (theodinproject.com), roadmap.sh. Provide 2-3 articles with real, commonly known page URLs.
+
 Be specific. If no portfolio links exist, score lower and suggest exactly what to build. If projects exist, comment on specifics.
-Strengths: 2-3 items. Improvements: 2-3 items. Resources: 1 per improvement.
+Strengths: 2-3 items. Improvements: 2-3 items.

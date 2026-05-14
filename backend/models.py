@@ -33,13 +33,21 @@ class SubmitAnswersRequest(BaseModel):
     answers: list[Answer]
 
 
+class Article(BaseModel):
+    title: str
+    url: str
+    source: str
+
+
 class DimensionResult(BaseModel):
     dimension: str
     score: int
     label: str
     strengths: list[str]
     improvements: list[str]
-    resources: list[str]
+    resources: list[str] = []
+    topics_to_study: list[str] = []
+    articles: list[Article] = []
 
 
 class AssessmentResult(BaseModel):

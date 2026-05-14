@@ -17,8 +17,16 @@ Return valid JSON:
   "score": <0-100>,
   "strengths": ["strength 1", "strength 2"],
   "improvements": ["improvement 1 with specific action step", "improvement 2 with specific action step"],
-  "resources": ["resource 1: name - URL or description", "resource 2: name - URL or description"]
+  "topics_to_study": ["specific topic or subject 1", "specific topic or subject 2", "specific topic or subject 3"],
+  "articles": [
+    {{"title": "Article or course title", "url": "https://real-url-to-resource", "source": "Site name"}},
+    {{"title": "Article or course title", "url": "https://real-url-to-resource", "source": "Site name"}}
+  ]
 }}
 
+IMPORTANT for topics_to_study: Be extremely specific. Not "learn algorithms" but "study graph traversal algorithms (BFS, DFS) and dynamic programming patterns". List 2-4 topics they should study next.
+
+IMPORTANT for articles: Only suggest URLs from well-known sites that you are confident exist: MDN Web Docs (developer.mozilla.org), freeCodeCamp (freecodecamp.org), roadmap.sh, GeeksforGeeks (geeksforgeeks.org), Coursera (coursera.org), Udemy (udemy.com), LeetCode (leetcode.com), Real Python (realpython.com), official documentation sites. Provide 2-3 articles. Use real, commonly known page URLs.
+
 Be specific. Never say "improve your skills." Instead say exactly WHICH skills and HOW.
-Strengths: 2-3 items. Improvements: 2-3 items. Resources: 1 per improvement.
+Strengths: 2-3 items. Improvements: 2-3 items.

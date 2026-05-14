@@ -27,6 +27,8 @@ def aggregate_scores(dimensions: list[dict]) -> dict:
             "strengths": dim.get("strengths", []),
             "improvements": dim.get("improvements", []),
             "resources": dim.get("resources", []),
+            "topics_to_study": dim.get("topics_to_study", []),
+            "articles": dim.get("articles", []),
         })
 
     return {
