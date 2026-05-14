@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ChevronDown, CheckCircle, ArrowUpCircle, BookOpen, GraduationCap, ExternalLink, Cpu, FileText, MessageSquare, Layers } from "lucide-react";
+import { CheckCircle, ArrowUpCircle, BookOpen, GraduationCap, ExternalLink, Cpu, FileText, MessageSquare, Layers } from "lucide-react";
 import { getScoreBand } from "../../utils/scoreBands";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
@@ -18,7 +17,6 @@ const LABELS = {
 };
 
 export default function DimensionCard({ dimension, delay = 0 }) {
-  const [expanded, setExpanded] = useState(false);
   const [ref, isVisible] = useIntersectionObserver();
   const band = getScoreBand(dimension.score);
   const iconInfo = ICONS[dimension.dimension] || ICONS.technical_skills;
@@ -27,8 +25,7 @@ export default function DimensionCard({ dimension, delay = 0 }) {
   return (
     <div
       ref={ref}
-      onClick={() => setExpanded(!expanded)}
-      className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+      className="bg-white rounded-2xl border border-gray-200 shadow-sm"
     >
       <div className="p-5">
         <div className="flex items-center justify-between">
@@ -40,12 +37,9 @@ export default function DimensionCard({ dimension, delay = 0 }) {
               {LABELS[dimension.dimension] || dimension.dimension}
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className={`text-lg font-bold font-mono px-3 py-1 rounded-lg ${band.bg} ${band.text}`}>
-              {dimension.score}
-            </span>
-            <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
-          </div>
+          <span className={`text-lg font-bold font-mono px-3 py-1 rounded-lg ${band.bg} ${band.text}`}>
+            {dimension.score}
+          </span>
         </div>
 
         <div className="h-1.5 rounded-full bg-gray-100 mt-4 overflow-hidden">
@@ -58,14 +52,9 @@ export default function DimensionCard({ dimension, delay = 0 }) {
             }}
           />
         </div>
-
-        {!expanded && dimension.strengths?.[0] && (
-          <p className="text-sm text-gray-400 mt-3 truncate">{dimension.strengths[0]}</p>
-        )}
       </div>
 
-      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expanded ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}>
-        <div className="px-5 pb-5 border-t border-gray-100 pt-4">
+      <div className="px-5 pb-5 border-t border-gray-100 pt-4">
           {dimension.strengths?.length > 0 && (
             <div className="mb-5">
               <div className="flex items-center gap-2 mb-3">
@@ -147,7 +136,6 @@ export default function DimensionCard({ dimension, delay = 0 }) {
               ))}
             </div>
           )}
-        </div>
       </div>
     </div>
   );
