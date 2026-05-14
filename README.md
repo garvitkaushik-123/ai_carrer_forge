@@ -1,10 +1,10 @@
-# AI Career Forge
+# Ready Score
 
 **Live App:** [ai-carrer-forge.vercel.app](https://ai-carrer-forge.vercel.app/)
 
-## What is AI Career Forge?
+## What is Ready Score?
 
-AI Career Forge is an AI-powered interview readiness tool that helps job seekers understand how prepared they are for their next interview — and exactly what to do to improve.
+Ready Score is an AI-powered interview readiness tool that helps job seekers understand how prepared they are for their next interview — and exactly what to do to improve.
 
 ## How It Works
 
@@ -32,4 +32,4 @@ AI Career Forge is an AI-powered interview readiness tool that helps job seekers
 
 ## Built With
 
-AI Career Forge uses Google Gemini AI to analyze resumes and evaluate responses, providing personalized and actionable career guidance.
+Ready Score uses Google Gemini AI to analyze resumes and evaluate responses, providing personalized and actionable career guidance.
