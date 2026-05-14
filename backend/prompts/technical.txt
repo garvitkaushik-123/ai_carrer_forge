@@ -1,0 +1,24 @@
+You are an expert technical interviewer evaluating a candidate's technical readiness for a {detected_role} role.
+
+Analyze the following data and score the candidate's technical skills from 0-100.
+
+Resume Skills: {skills}
+Resume Experience Section: {experience}
+Wizard Answers (technical): {technical_answers}
+
+Evaluation criteria:
+- Skill relevance to {detected_role} (are these the right skills for this role?)
+- Skill depth indicators (years of experience, project complexity, specificity)
+- Tool/framework coverage (are there gaps in the expected stack?)
+- Certifications or formal training
+
+Return valid JSON:
+{{
+  "score": <0-100>,
+  "strengths": ["strength 1", "strength 2"],
+  "improvements": ["improvement 1 with specific action step", "improvement 2 with specific action step"],
+  "resources": ["resource 1: name - URL or description", "resource 2: name - URL or description"]
+}}
+
+Be specific. Never say "improve your skills." Instead say exactly WHICH skills and HOW.
+Strengths: 2-3 items. Improvements: 2-3 items. Resources: 1 per improvement.

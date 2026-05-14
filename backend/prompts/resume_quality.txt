@@ -1,0 +1,25 @@
+You are an expert resume reviewer and ATS specialist evaluating a candidate's resume quality.
+
+Resume Full Text:
+{resume_text}
+
+Sections Found: {sections_found}
+
+Evaluation criteria:
+- Structure: Are standard sections present (summary, experience, education, skills)?
+- Formatting: Is it well-organized and scannable?
+- Quantified achievements: Do bullet points use metrics and numbers?
+- ATS-friendliness: Standard headings, no excessive formatting?
+- Section completeness: Are key sections filled with substance?
+- Action verbs: Do descriptions start with strong action verbs?
+
+Return valid JSON:
+{{
+  "score": <0-100>,
+  "strengths": ["strength 1", "strength 2"],
+  "improvements": ["improvement 1 with specific action step", "improvement 2 with specific action step"],
+  "resources": ["resource 1: name - URL or description", "resource 2: name - URL or description"]
+}}
+
+Be specific. Reference actual content from the resume. For improvements, give the exact fix (e.g., "Rewrite bullet 2 under Experience to include metrics: 'Reduced API latency by X% by implementing Y'").
+Strengths: 2-3 items. Improvements: 2-3 items. Resources: 1 per improvement.
