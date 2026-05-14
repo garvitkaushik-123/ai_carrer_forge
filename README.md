@@ -4,6 +4,8 @@
 
 **Demo Video:** [Watch on Google Drive](https://drive.google.com/drive/folders/1yR_WMG3lPv95zs5enIvODSQBAcf7LRqC?usp=sharing)
 
+**Download APK:** [Download for Android](https://drive.google.com/uc?export=download&id=1LSWm0BxvaWnTMhjvupmdIKXwe3BNJS69)
+
 ## What is Ready Score?
 
 Ready Score is an AI-powered interview readiness tool that helps job seekers understand how prepared they are for their next interview — and exactly what to do to improve.
