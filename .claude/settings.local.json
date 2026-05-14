@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -m venv /Users/garvit/Desktop/personal/AppsWorthy/Hackathons/ai_carrer_forge/backend/.venv)",
+      "Bash(/Users/garvit/Desktop/personal/AppsWorthy/Hackathons/ai_carrer_forge/backend/.venv/bin/pip install *)",
+      "Bash(wait)",
+      "Bash(/Users/garvit/Desktop/personal/AppsWorthy/Hackathons/ai_carrer_forge/backend/.venv/bin/pip list *)",
+      "Bash(timeout 5 .venv/bin/uvicorn main:app --port 8000)",
+      "Bash(gtimeout 5 .venv/bin/uvicorn main:app --port 8000)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(git add *)",
+      "Bash(.venv/bin/python -m pytest tests/test_resume_parser.py -v)",
+      "Bash(.venv/bin/pip install *)",
+      "Bash(git commit -m ' *)",
+      "Bash(.venv/bin/python -c \"from routers.upload import router; print\\('OK'\\)\")",
+      "Bash(npm install *)"
+    ]
+  }
+}
